@@ -25,7 +25,6 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 1px solid palevioletred;
 }
 
 h1,
@@ -116,7 +115,7 @@ ul {
 }
 .hero {
   width: 1600px;
-  height: 600px;
+
   margin: 0 auto;
   background-color: var(--background-hero);
   text-align: center;
@@ -185,6 +184,14 @@ ul {
 .worker {
   background-color: var(--background-name);
 }
+
+.img-container-worker {
+  padding: 0px;
+  margin: 0px;
+
+  display: flex;
+  flex-wrap: wrap;
+}
 .worker .img-title {
   padding-top: 94px;
 }
@@ -219,6 +226,7 @@ ul {
 .worker-img-item {
   width: 270px;
   margin-left: 30px;
+  padding-bottom: 94px;
 }
 .worker-img-item:first-child {
   margin-left: 0px;
@@ -232,8 +240,6 @@ ul {
   width: 270px;
 }
 .worker-name {
-  margin-bottom: 10px;
-
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -242,13 +248,31 @@ ul {
 
   color: var(--title-color);
 }
+.title-text-worker {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: auto;
+  padding-right: auto;
+}
 
 .footer {
   background-color: var(--background-hero);
 }
+
+.footer .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: auto;
+  padding-right: auto;
+}
 .footer a {
   text-decoration: none;
+  display: block;
 }
+.logo-footer {
+  margin-bottom: 20px;
+}
+
 .footer-address {
   font-weight: 400;
   font-style: normal;
@@ -259,6 +283,8 @@ ul {
   color: var(--hero-color);
 }
 .footer-address a {
+  margin-top: 9px;
+
   font-family: Roboto;
   font-weight: 400;
   font-size: 14px;
@@ -311,6 +337,8 @@ ul {
 .img-container {
   display: flex;
   flex-wrap: wrap;
+
+  padding-bottom: 94px;
 }
 .img-cont-element {
   width: 370px;
