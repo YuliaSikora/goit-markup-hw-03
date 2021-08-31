@@ -12,6 +12,7 @@ color: #757575 серый абзацы и адрес в хэдере*/
   --background-hero: #2f303a;
   --background-name: #f5f4fa;
   --background-button-hover: #188ce8;
+  --border-header: #ececec;
 }
 
 body {
@@ -19,6 +20,9 @@ body {
   color: var(--main-text-color);
 
   letter-spacing: 0.02em;
+}
+header {
+  border-bottom: 1px solid var(--border-header);
 }
 .container {
   width: 1200px;
@@ -38,13 +42,14 @@ p {
 .main-head {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .nav {
   display: flex;
+
+  align-items: center;
 }
 .logo {
-  padding-top: 24px;
   margin-right: 93px;
 
   color: var(--title-color);
@@ -114,14 +119,13 @@ ul {
   padding: 0;
 }
 .hero {
-  width: 1600px;
-
+  padding-top: 200px;
+  padding-bottom: 200px;
   margin: 0 auto;
   background-color: var(--background-hero);
   text-align: center;
 }
-.hero > h1 {
-  padding: 200px 452px 30px 452px;
+.hero h1 {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -129,12 +133,13 @@ ul {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
+  margin-bottom: 30px;
+
   color: var(--hero-color);
 }
-.hero > button {
+.hero button {
   padding: 10px 32px;
   border-radius: 4px;
-  margin-bottom: 200px;
 
   font-family: roboto, sans-serif;
   font-weight: 700;
@@ -151,14 +156,20 @@ ul {
   background-color: var(--background-button-hover);
 }
 
-.section-info {
-  display: flex;
+.hidden-title {
+  display: none;
+}
+.section-advantage {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+.section-info {
+  display: flex;
 }
 
 .section-info li {
   margin-left: 30px;
+  width: 270px;
 }
 .section-info li:first-child {
   margin-left: 0px;
@@ -181,6 +192,10 @@ ul {
 
   letter-spacing: 0.03em;
 }
+.section-job {
+  padding-bottom: 94px;
+}
+
 .worker {
   background-color: var(--background-name);
 }
@@ -192,8 +207,9 @@ ul {
   display: flex;
   flex-wrap: wrap;
 }
-.worker .img-title {
+.worker {
   padding-top: 94px;
+  padding-bottom: 94px;
 }
 .img-title {
   margin-bottom: 50px;
@@ -207,11 +223,16 @@ ul {
 }
 .img-item {
   display: inline-flex;
-  padding-bottom: 94px;
 }
 .img-work {
+  width: 370px;
   margin-left: 30px;
 }
+
+.img-item img {
+  display: block;
+}
+
 .img-work:first-child {
   margin-left: 0px;
 }
@@ -226,7 +247,6 @@ ul {
 .worker-img-item {
   width: 270px;
   margin-left: 30px;
-  padding-bottom: 94px;
 }
 .worker-img-item:first-child {
   margin-left: 0px;
