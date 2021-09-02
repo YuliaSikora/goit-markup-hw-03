@@ -13,6 +13,7 @@ color: #757575 серый абзацы и адрес в хэдере*/
   --background-name: #f5f4fa;
   --background-button-hover: #188ce8;
   --border-header: #ececec;
+  --border-gallery: #eeeeee;
 }
 
 body {
@@ -29,6 +30,20 @@ header {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 h1,
@@ -156,9 +171,6 @@ ul {
   background-color: var(--background-button-hover);
 }
 
-.hidden-title {
-  display: none;
-}
 .section-advantage {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -252,14 +264,11 @@ ul {
   margin-left: 0px;
 }
 .worker-img-item p {
-  margin-bottom: 30px;
   text-align: center;
 }
-.photo-worker {
-  margin-bottom: 30px;
-  width: 270px;
-}
+
 .worker-name {
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -277,14 +286,10 @@ ul {
 
 .footer {
   background-color: var(--background-hero);
-}
-
-.footer .container {
   padding-top: 60px;
   padding-bottom: 60px;
-  padding-left: auto;
-  padding-right: auto;
 }
+
 .footer a {
   text-decoration: none;
   display: block;
@@ -303,8 +308,6 @@ ul {
   color: var(--hero-color);
 }
 .footer-address a {
-  margin-top: 9px;
-
   font-family: Roboto;
   font-weight: 400;
   font-size: 14px;
@@ -318,7 +321,17 @@ ul {
 .footer-address a:focus {
   color: var(--accent-color);
 }
+.link-footer {
+  margin-top: 9px;
+}
+.link-footer-tel {
+  margin-top: 9px;
+}
 
+.our-work {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .our-work button {
   display: inline-block;
   padding: 6px 22px;
@@ -352,13 +365,14 @@ ul {
 .btn-filter {
   display: flex;
   justify-content: center;
-  margin: 100px 516px 56px 495px;
+  margin-bottom: 50px;
 }
-.img-container {
+.btn-filter-position {
+  margin-left: 8px;
+}
+.gallery {
   display: flex;
   flex-wrap: wrap;
-
-  padding-bottom: 94px;
 }
 .img-cont-element {
   width: 370px;
@@ -380,6 +394,8 @@ img {
   line-height: 2;
   letter-spacing: 0.06em;
 
+  margin-bottom: 4px;
+
   color: var(--title-color);
 }
 .gallery p {
@@ -391,4 +407,8 @@ img {
 }
 .gallery a {
   text-decoration: none;
+}
+.gallery-text {
+  padding: 20px 24px;
+  border: 1px solid var(--border-gallery);
 }
